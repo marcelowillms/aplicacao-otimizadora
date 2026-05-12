@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const db = require("../db");
 
-// GET busca tarefas de um usuário
+// busca tarefas de um usuário
 router.get("/usuario/:usuario_id", async (req, res) => {
     try {
         const { usuario_id } = req.params;
@@ -22,7 +22,7 @@ router.get("/usuario/:usuario_id", async (req, res) => {
     }
 });
 
-// POST cria nova tarefa
+// cria nova tarefa
 router.post("/", async (req, res) => {
     try {
         const { usuario_id, titulo, prioridade, tempo_estimado, categoria } = req.body;
@@ -46,7 +46,7 @@ router.post("/", async (req, res) => {
     }
 });
 
-// PATCH conclui tarefa e pontua o usuário
+// conclui tarefa e pontua o usuário
 router.patch("/:id/concluir", async (req, res) => {
     const client = await db.connect();
 
@@ -69,7 +69,7 @@ router.patch("/:id/concluir", async (req, res) => {
             return res.status(400).json({ erro: "Tarefa já foi concluída" });
         }
 
-        // Calcula pontos: prioridade * 10
+        // Calcula pontos
         const pontos = (tarefa.prioridade ?? 1) * 10;
 
         await client.query("BEGIN");
@@ -112,7 +112,7 @@ router.patch("/:id/concluir", async (req, res) => {
     }
 });
 
-// DELETE remove tarefa
+// remove tarefa
 router.delete("/:id", async (req, res) => {
     try {
         const { id } = req.params;
