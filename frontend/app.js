@@ -1,4 +1,6 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = window.location.hostname === "localhost" 
+    ? "http://localhost:3000" 
+    : "https://aplicacao-otimizadora-production.up.railway.app";
 
 
 function mostrarMsg(texto, tipo) {
