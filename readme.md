@@ -66,9 +66,13 @@ Abra o .env e defina os valores:
 
 
 DB_USER=admin
+
 DB_HOST=postgres
+
 DB_NAME=aplicacao_otimizadora
+
 DB_PASSWORD=sua_senha_aqui
+
 DB_PORT=5432
 
 
