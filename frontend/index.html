@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+</head>
+<body>
+<script>
+  if (localStorage.getItem("usuario")) {
+    window.location.href = "tarefas.html";
+  } else {
+    window.location.href = "login.html";
+  }
+</script>
+</body>
+</html>
