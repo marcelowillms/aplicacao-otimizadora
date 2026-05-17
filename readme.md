@@ -5,6 +5,7 @@ Sistema web de gerenciamento de tarefas com sistema de pontuação por conclusã
 ---
 ## Links
 
+- Aplicação em nuvem https://impartial-integrity-production.up.railway.app/
 - Protótipo no Figma (https://www.figma.com/design/woB69VLn6FMxM8gxiSfXbF/Grupo-53?node-id=0-1&p=f&t=9J41AOOASRQslHZW-0)
 - Vídeo de demonstração (colocar link do youtube)
 
