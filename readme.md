@@ -1,4 +1,4 @@
-# Aplicação Otimizadora de Tarefas
+# Aplicação Otimizadora de Sequência de Atividades
 
 Sistema web de gerenciamento de tarefas com sistema de pontuação por conclusão de atividades.
 
