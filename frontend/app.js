@@ -150,8 +150,9 @@ function renderizar(tarefas) {
 
     lista.innerHTML = ordenadas.map(t => {
         const data = new Date(t.data_criacao);
-        const dataStr = data.toLocaleDateString("pt-BR", { timeZone: "America/Sao_Paulo" });
-        const horaStr = data.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "America/Sao_Paulo" });
+        data.setHours(data.getHours() + 3);
+        const dataStr = data.toLocaleDateString("pt-BR");
+        const horaStr = data.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" });
 
         return `
         <div class="tarefa-item ${cores[t.categoria] || 'outros'}" onclick="clicarTarefa(${t.id})">
